@@ -139,10 +139,10 @@ function start() {
 }; 
 
 function wins() {
-    const heading1 = document.getElementsByClassName("container__list");
-    heading1[0].classList.add("wins");
+    const containerList = document.getElementsByClassName("container__list");
+    containerList[0].classList.add("wins");
     setTimeout(function() {
-        heading1[0].classList.remove("wins");
+        containerList[0].classList.remove("wins");
     }, 3000); 
     
 }
