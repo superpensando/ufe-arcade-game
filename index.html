@@ -3,34 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Laura's Arcade Game Version</title>
+    <meta name="description" content="">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
-        <div class="container__title">
+        <div class="container__header">
             <h1>Laura's Arcade Game Version!</h1>
-            <div class="container__body">
-                  <ul class="container__list">
-                        <li>
-                            <img src="images/Star.png">
-                        </li>
-                        <li>
-                            <img src="images/Star.png">
-                        </li>
-                        <li>
-                            <img src="images/Star.png">
-                        </li>
-                        <li>
-                            <img src="images/Star.png">
-                        </li>
-                        <li>
-                            <img src="images/Star.png">
-                        </li>
-                  </ul>
+            <div class="container__game">
+                <span class="container__lifesText">Yo have 
+                    <span class="container__lifesCounts">3</span> 
+                    lifes!
+                </span>
+                <ul class="container__lifesList">
+                    <li class="life1">
+                        <img src="images/Heart.png">
+                    </li>
+                    <li class="life2">
+                        <img src="images/Heart.png">
+                    </li>
+                    <li class="life3">
+                        <img src="images/Heart.png">
+                    </li>
+                </ul>
+                <span class="container__winsText hide">
+                    You Wins 
+                    <span class="container__winsCounts">0</span> 
+                    times!
+                </span>
             </div>
+        </div>        
+    </div>
+    <div class="modal-content hide">
+        <div class="modal">
+            <p>
+                You have no lifes left!<br>
+                <span class="modal-facebook">
+                ... and there is still no exists Facebook to invite your friends XD... <br/>               
+                </span> 
+                Restart the game and enjoy! <br/>  
+                <span id="restart" class="modal-restart">
+                     <i class="fa fa-repeat"></i>
+                </span>
+            </p>
+
         </div>
     </div>
-
     <script src="js/resources.js"></script>
     <script src="js/engine.js"></script>
     <script src="js/app.js"></script>
