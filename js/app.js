@@ -139,7 +139,7 @@ function start() {
 }; 
 
 function wins() {
-    const heading1 = document.getElementsByClassName("container__canvas--wins");
+    const heading1 = document.getElementsByClassName("container__list");
     heading1[0].classList.add("wins");
     setTimeout(function() {
         heading1[0].classList.remove("wins");
