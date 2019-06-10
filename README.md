@@ -10,7 +10,7 @@
 
 ## Instructions
 
-This project is a classic Arcade Game Project Version, the purpose of it is to test and entertain concentration, motor skill and enjoy!
+This project is a classic Arcade Game Project Version, the purpose of it is to test concentration, motor skill, entertain and enjoy!
 
 How to play?
 
