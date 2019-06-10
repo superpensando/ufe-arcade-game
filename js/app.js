@@ -242,7 +242,6 @@ function collision() {
     //When the lifes is 0, the game is over 
     //Open Modal
     if (lifes === 0 ) {
-        //Open Modal
         const modal = document.getElementsByClassName("modal-content");
         modal[0].classList.remove("hide");
     }
