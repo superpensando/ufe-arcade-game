@@ -68,6 +68,9 @@ body {
   width:50%;
   text-align: right; 
 }
+.container__winsText img {
+  height:1.90rem; 
+}
 
 .container__lifesList {
   width:20%;
