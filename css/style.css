@@ -267,6 +267,7 @@ canvas.collision {
   height: 100%; 
   z-index:1;
   background-color:rgba(255, 255, 255, 0.90);
+ 
 }
 .modal {
   position: relative;
@@ -280,14 +281,24 @@ canvas.collision {
   border-radius: 8px;
   box-shadow: 5px 5px 46px 5px grey;
 }
-
 .modal p {
   text-align:center; 
 }
+.modal p .modal-score {
+  display:block;
+  font-size:2.5rem; 
+}
+.modal p .modal-life {
+  display:block;
+  color:brown;
+}
 .modal p .modal-facebook {
+  display:block;
   font-size:1.5rem;
   margin-bottom:0.5rem; 
+  color:brown;
 }
 .modal p .modal-restart {
-  cursor:pointer; 
+  cursor:pointer;
+  font-size:3rem;
 }
