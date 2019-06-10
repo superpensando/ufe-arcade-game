@@ -1,20 +1,33 @@
-# Classic Arcade Game Clone Project
+# Classic Arcade Game Project
+
+3rd Project of [Front-End Web Developer Nanodegree](https://eu.udacity.com/course/front-end-web-developer-nanodegree--nd001)  Program. 
 
 ## Table of Contents
 
-- [Instructions](#instructions)
-- [Contributing](#contributing)
+* [Instructions](#instructions)
+* [Code Depencies](#code-dependencies)
+* [Getting Started](#getting-started)
 
 ## Instructions
 
-Use this [rubric](https://review.udacity.com/#!/rubrics/15/view) for self-checking your submission.
+This project is a classic Arcade Game Project Version, the purpose of it is to test and entertain concentration, motor skill and enjoy!
 
-Make sure the functions you write are **object-oriented** - either class functions (like `Player` and `Enemy`) or class prototype functions such as `Enemy.prototype.checkCollisions`. Also make sure that the keyword `this` is used appropriately within your class and class prototype functions to refer to the object the function is called upon.
+How to play?
 
-Your **README.md** file should be updated with instructions on both how to 1. Run and 2. Play your arcade game.
+- Say hello to your character to gain confidence..
+- To move the character press the arrow keys: ↑(up) ↓(down) ←(left) →(right)
+- You have to prevent your character from colliding with the bugs and get your character to reach the river! 
+- When you arrives, you win and `canvas` will be happy!
+- When you collides, you return to the starting position and `canvas` becomes sad and you lost a life!
+- You have 3 lives to try to reach the river!
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+## Code Dependencies
 
-## Contributing
+The app have the following dependencies:
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+1. Font Awesome.
+2. Google Fonts.
+
+## Getting Started
+
+Download the project and open `index.html` in any browser.
