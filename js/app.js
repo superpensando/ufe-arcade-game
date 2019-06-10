@@ -10,11 +10,8 @@ const canvasWinnerPositionY = -25;
 //Enemy variables
 const enemyX = 0;  
 const enemyY1 = 60;
-const enemySpeed1 = 1+Math.random()*600;
 const enemyY2 = 145;
-const enemySpeed2 = 1+Math.random()*400;
 const enemyY3 = 230;
-const enemySpeed3 = 1+Math.random()*550; 
 //Player variables
 const playerSpeed = 80;
 const playerX = onScreenMaxWidth/2;
@@ -136,17 +133,19 @@ class Player {
 }
 
 
+//Functions
+const speedRandom = speed  => (1+Math.random()*speed);
+
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-var allEnemies = [];
+var allEnemies=[];
 allEnemies.push(
-    new Enemy(enemyX,enemyY1,enemySpeed1),
-    new Enemy(enemyX,enemyY2,enemySpeed2),
-    new Enemy(enemyX,enemyY3,enemySpeed3),
+    new Enemy(enemyX,enemyY1,speedRandom(800)),
+    new Enemy(enemyX,enemyY2,speedRandom(700)),
+    new Enemy(enemyX,enemyY3,speedRandom(550)),
 );
 var player = new Player(playerX,playerY,playerSpeed);
-
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
@@ -160,6 +159,8 @@ document.addEventListener('keyup', function(e) {
 
     player.handleInput(allowedKeys[e.keyCode]);
 });
+
+
 
 
 //Restart Button
@@ -183,21 +184,30 @@ restart.addEventListener("click", function(){
     const wins = document.getElementsByClassName("container__winsText");
     wins[0].classList.add("hide");
     //Reset Player
-    player.reset();  
+    player.reset(); 
+    //Reset Enemies 
+    allEnemies = [];
+    allEnemies.push(
+        new Enemy(enemyX,enemyY1,speedRandom(800)),
+        new Enemy(enemyX,enemyY2,speedRandom(700)),
+        new Enemy(enemyX,enemyY3,speedRandom(550)),
+    );
 });
 
 
-function start() {
-    player.reset();
-}; 
 
-function win() {
+
+const start = () => (player.reset());
+
+const win = () => {
     winCounts += 1;
-    //WinText Show -When users wins, appears the number of win games. 
+    //WinShows - When users wins, appears the number and the river icon!
     const wins = document.getElementsByClassName("container__winsText");
     wins[0].classList.remove("hide");
-    const winsCounter = document.getElementsByClassName("container__winsCounts");
-    winsCounter[0].textContent = winCounts; 
+    const winsCounter1 = document.getElementsByClassName("container__winsCounts1");
+    const winsCounter2 = document.getElementsByClassName("container__winsCounts2");
+    winsCounter1[0].textContent = winCounts;
+    winsCounter2[0].textContent = winCounts; 
     //Start Game to continue gaming
     setTimeout(()=> {
         start();
@@ -210,7 +220,7 @@ function win() {
     }, 1000);     
 }
 
-function collision() {
+const collision = () => {
     collisionCounts += 1; 
     //CollisionEffects -When user collides, a life disappears (a heart)
     switch (collisionCounts) {
