@@ -19,7 +19,7 @@ How to play?
 - You have to prevent your character from colliding with the bugs and get your character to reach the river! 
 - When you arrives, you win and `canvas` will be happy!
 - When you collides, you return to the starting position and `canvas` becomes sad and you lost a life!
-- You have 3 lives to try to reach the river!
+- You have 3 lifes to try to reach the river!
 
 ## Code Dependencies
 

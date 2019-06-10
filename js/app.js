@@ -10,11 +10,11 @@ const canvasWinnerPositionY = -25;
 //Enemy variables
 const enemyX = 0;  
 const enemyY1 = 60;
-const enemySpeed1 = 1+Math.random()*500;
+const enemySpeed1 = 1+Math.random()*600;
 const enemyY2 = 145;
-const enemySpeed2 = 1+Math.random()*200;
+const enemySpeed2 = 1+Math.random()*400;
 const enemyY3 = 230;
-const enemySpeed3 = 1+Math.random()*350; 
+const enemySpeed3 = 1+Math.random()*550; 
 //Player variables
 const playerSpeed = 80;
 const playerX = onScreenMaxWidth/2;
@@ -199,13 +199,13 @@ function win() {
     const winsCounter = document.getElementsByClassName("container__winsCounts");
     winsCounter[0].textContent = winCounts; 
     //Start Game to continue gaming
-    setTimeout(function() {
+    setTimeout(()=> {
         start();
-    }, 1000);
+    }, 1000); 
     //WinEffects - When users wins, the canvas are happy!
     const canvas = document.getElementsByTagName("canvas");
     canvas[0].classList.add("wins");
-    setTimeout(function() {
+    setTimeout(()=> {
         canvas[0].classList.remove("wins");
     }, 1000);     
 }
@@ -232,7 +232,7 @@ function collision() {
     //CollisionEffects - When users collides, the canvas are  is afraid!
     const canvas = document.getElementsByTagName("canvas");
     canvas[0].classList.add("collision");
-    setTimeout(function() {
+    setTimeout(()=> {
         canvas[0].classList.remove("collision");
     }, 1000); 
     //CollisionText Show -When users collides, appears the number of the number of lives that are left .
